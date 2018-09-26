@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitleaf</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="img/png" href="img/FavIcon.png" />
+	<link rel="stylesheet" href="css/fuentes.css">
+
+</head>
+<script type="text/javascript">
+	function reproducir(){
+		var video = document.getElementById("video");
+		video.play();
+	}
+</script>
+<body>
+
+
+
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body{
+	margin:0;
+	height: 100%;
+	width: 100%;
+	box-sizing:border-box;
+}
+.container_padre{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.columna1{
+	width: 75%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.columna2{
+	width: 25%;
+	height: 100%;
+	background-color: #fff;
+}
+.contenedor_columnas2{
+	width:100%;
+	height: auto;
+	padding-left: 7%;
+	padding-right: 7%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#titulo1{
+	font-family: fuenteDos;
+	font-size: 50px;
+}
+
+#titulo2{
+	font-family: fuenteDos;
+	font-size: 50px;
+	color: #00b44f;
+	margin-top:-10px;
+}
+#parrafo1{
+	font-family: fuenteUno;
+	font-size: 21px;
+}
+#parrafo2{
+	font-family: fuenteTres;
+	font-size: 18px;
+}
+
+video{
+		position: absolute;
+		min-width: 100%;
+		min-height: 100%;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%) translateY(-50%);
+		transform: translateX(-50%) translateY(-50%);
+		-webkit-overflow: hidden;
+}
+
+form{width: 100%;}
+form input{width:100%; font-family:fuenteUno; font-size:25; height:40px; margin-bottom: 20px; background-color:#f2f0f0; padding-left: 40px; border:none;}
+form textarea{width:100%; font-family:fuenteUno; font-size:15; height:90px; margin-bottom:20px; background-color:#f2f0f0; padding-left: 40px; padding-top: 10px;border:none;}
+
+.campo_usuario{
+	background:url('img/usuario.png') no-repeat  8px 8px;
+	background-size: 25px 25px;
+	background-color:#f2f0f0;
+}
+.campo_correo{
+	background:url('img/mail.png') no-repeat  8px 8px;
+	background-size: 25px 25px;
+	background-color:#f2f0f0;
+}
+.campo_mensaje{
+	background:url('img/extra.png') no-repeat  10px 5px;
+	background-size: 25px 25px;
+	background-color:#f2f0f0;
+}
+
+	@media only screen and (max-width: 1150px) {
+		.columna1{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.columna2{
+			width: 60%;
+			height: 100%;
+			background-color: #fff;
+		}
+}
+@media only screen and (max-width: 800px) {
+	.container_padre{
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	.columna1{
+	  all:initial;
+		width: 100%;
+		height: auto;
+		position: relative;
+		display: block;
+	}
+
+	.columna1 video{
+		all: initial;
+		width: 100%;
+		top: 0px;
+		left:0px;
+
+	}
+	.columna2{
+		all: initial;
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		height: auto;
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.contenedor_columnas2{
+		all: initial;
+		width:100%;
+
+
+
+
+	}
+}
+
+</style>
+
+<section class="container_padre">
+	<article class="columna1">
+
+		<video id="video" src="Fitleaf3.mp4" autoplay loop volume="0.2" poster="img/fondo.jpg" onclick="reproducir()">
+		   <source src="Fitleaf3.mp4" autoplay type='video/mp4; codecs="avc1,mp4a"' />
+		   <source src="Fitleaf.webm" autoplay type='video/webm; codecs="avc1,mp4a"' />
+		</video>
+
+	</article>
+	<article class="columna2">
+		<div class="contenedor_columnas2">
+			<h1 id="titulo1">Experience</h1>
+			<h1 id="titulo2">change</h1>
+			<br>
+			<p id="parrafo1"><strong>Upgrade</strong> your skills, your plants' life cycle and dvelopment.</p>
+			<br>
+			<p id="parrafo2">Sign up for updates, industry news and trends.</p>
+			<br>
+		 	<form action="procesar.php" method="post">
+		 		<input class="campo_usuario"  type="text" name="name" placeholder="Full Name" required>
+		 		<input class="campo_correo"  type="email" name="email" placeholder="E-mail" required>
+				<textarea class="campo_mensaje" name="mensaje" rows="8" cols="80" placeholder="Your biggest challenge when growing?" required></textarea>
+				<input style="width:100%; padding-left:0px; background-color: #00b44f; height:35px; color: #fff; font-weight: bold;border:none; font-family:fuenteUno; font-size:15px; cursor:pointer;" type="submit" name="" value="Make a Leaference">
+			</form>
+		</div>
+	</article>
+</section>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+   <!-- <script src="js/mediaquerys.js"></script> -->
+
+</body>
+</html>

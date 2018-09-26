@@ -1,0 +1,12 @@
+@font-face{
+		font-family:fuenteUno;
+        src: url(campton-light.ttf);
+}
+@font-face{
+		font-family:fuenteDos;
+        src: url(Campton-Bold.ttf);
+}
+@font-face{
+		font-family:fuenteTres;
+        src: url(campton-medium.ttf);
+}
